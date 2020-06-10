@@ -106,6 +106,7 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord (~> 5.2.3)
+  activesupport
   capybara
   database_cleaner
   launchy
@@ -122,4 +123,4 @@ DEPENDENCIES
   tux
 
 BUNDLED WITH
-   2.0.2
+   2.1.4
