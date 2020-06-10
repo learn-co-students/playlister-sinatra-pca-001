@@ -1,0 +1,19 @@
+<h2>Here is some info on that song!!</h2>
+
+Successfully created song.
+Successfully updated song.
+
+<%= @song.name %>
+<h3>Artist:</h3>
+
+  Name: <a href="/artists/<%= @song.artist.slug %>"><%= @song.artist.name %> </a>
+  <br>
+
+
+<br>
+
+<h3>Genre:</h3>
+<% @song.genres.each do |genre| %>
+  Name: <a href="/genres/<%= genre.slug %>"><%= genre.name %> </a>
+  <br>
+<% end %>
