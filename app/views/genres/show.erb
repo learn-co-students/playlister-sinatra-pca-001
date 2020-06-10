@@ -2,7 +2,7 @@
 
 <h4>Artists:</h4>
 
-<% @genre.songs.map(&:artist).uniq.each do |artist| %>
+<% @genre.artists.each do |artist| %>
 <a href="/artists/<%=artist.slug%>"><%=artist.name%></a><br>
 <% end %>
 <br><br>
