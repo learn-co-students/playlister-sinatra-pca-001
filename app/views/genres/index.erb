@@ -1,0 +1,17 @@
+<h2>All Genres</h2>
+<style>
+body { height: 100vh;}
+section {
+  overflow: scroll;
+  height: 60%;
+}
+
+</style>
+<section>
+  <% @genres.each do |genre| %>
+  <a href="/genres/<%=genre.slug%>"><%= genre.name %></a><br>
+  <% end %>
+</section>
+<br><hr><br>
+<a href="/genres/new">New Genre</a>
+<a href="/">Home</a>

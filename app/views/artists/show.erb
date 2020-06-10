@@ -1,0 +1,15 @@
+<h3><%= @artist.name %></h3>
+
+<h4>Songs:</h4>
+<% @artist.songs.each do |song|%>
+<a href="/songs/<%= song.slug%>"><%= song.name %></a><br>
+<% end %>
+
+<h4>Genres:</h4>
+<% @artist.songs.map(&:genres).flatten.uniq.each do |genre| %>
+<a href="/genres/<%= genre.slug%>"><%= genre.name %></a><br>
+<% end %>
+
+<br><hr><br>
+<a href="/artists/<%= @artist.slug %>/edit">Edit Me</a><br>
+<a href="/artists">Back to Artists</a>
