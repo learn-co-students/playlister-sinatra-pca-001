@@ -1,4 +1,4 @@
-require_relative "../controllers/concerns/slugifiable.rb"
+require_relative "./concerns/slugifiable.rb"
 
 class Song < ActiveRecord::Base
   belongs_to :artist
