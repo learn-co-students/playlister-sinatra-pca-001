@@ -1,0 +1,17 @@
+<h2>All Artists</h2>
+<style>
+body { height: 100vh;}
+section {
+  overflow: scroll;
+  height: 60%;
+}
+
+</style>
+<section>
+  <% @artists.each do |artist| %>
+  <a href="/artists/<%=artist.slug%>"><%= artist.name %></a><br>
+  <% end %>
+</section>
+<br><hr><br>
+<a href="/artists/new">New Artist</a>
+<a href="/">Home</a>
